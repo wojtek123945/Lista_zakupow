@@ -1,0 +1,12 @@
+Spozywcze
+    Chleb|a
+    Maslo|a
+    Mleko|l
+    Zolty ser|kg
+Chemia
+    Mydlo|a
+    Plyn do mycia naczyn|a
+Motoryzacja
+    Odswiezacz powietrza|a
+    Plyn do spryskiwaczy|a
+    Paski|m

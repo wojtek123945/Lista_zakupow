@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lista_zakupow.Controllers.APIController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="220.0" style="-fx-background-color: #A9A9A9;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="shoppingTableView" layoutX="10.0" layoutY="45.0" prefHeight="425.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="96.20001029968262" resizable="false" text="Name" />
+                <TableColumn fx:id="quantityColumn" prefWidth="56.40003204345703" resizable="false" text="Quantity" />
+                  <TableColumn fx:id="unitColumn" prefWidth="42.60003662109375" text="Unit" />
+              </columns>
+            </TableView>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="70.0" text="Category:">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label fx:id="categoryLable" layoutX="80.0" layoutY="10.0" prefHeight="25.0" prefWidth="100.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: #EEEEE5;" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="filterChoiceBox" layoutX="40.0" layoutY="45.0" onAction="#filterCBClick" prefWidth="150.0" />
+            <Label layoutX="40.0" layoutY="80.0" prefHeight="30.0" prefWidth="120.0" text="Add product">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="-20.0" layoutX="361.0" layoutY="157.0" startX="-100.0" />
+            <ChoiceBox fx:id="addPSelectChoiceBox" layoutX="41.0" layoutY="130.0" onAction="#addPSelectCBClick" prefWidth="150.0" />
+            <Label layoutX="40.0" layoutY="10.0" prefHeight="25.0" prefWidth="70.0" text="Filter">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addPQuantityTF" layoutX="41.0" layoutY="230.0" promptText="Quantity" />
+            <Button fx:id="addPButton" layoutX="290.0" layoutY="230.0" mnemonicParsing="false" onAction="#addPButtonClick" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="Add" />
+            <Line endX="200.0" layoutX="140.0" layoutY="270.0" startX="-100.0" />
+            <Button fx:id="deleteButton" layoutX="39.0" layoutY="328.0" mnemonicParsing="false" onAction="#deleteButtonClick" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="Delete" />
+            <ChoiceBox fx:id="deletedCategoriesChoiceBox" layoutX="110.0" layoutY="327.0" onAction="#deleteCategoriesCBClick" prefHeight="26.0" prefWidth="100.0" />
+            <Label fx:id="errorMessageLable" layoutX="39.0" layoutY="371.0" prefHeight="100.0" prefWidth="300.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="290.0" layoutY="23.0" mnemonicParsing="false" onAction="#quitButtonClick" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="Quit" />
+            <ChoiceBox fx:id="deletedProductsChoiceBox" layoutX="240.0" layoutY="327.0" prefHeight="26.0" prefWidth="100.0" />
+            <Label layoutX="110.0" layoutY="293.0" prefHeight="25.0" prefWidth="100.0" text="Categories">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="240.0" layoutY="293.0" prefHeight="25.0" prefWidth="100.0" text="Products">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="addEditMode" alignment="CENTER" layoutX="261.0" layoutY="127.0" prefHeight="30.0" prefWidth="80.0" text="Add mode">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="200.0" layoutX="142.0" layoutY="111.0" startX="-100.0" />
+            <ChoiceBox fx:id="addProductNameChoiceBox" layoutX="41.0" layoutY="180.0" prefWidth="150.0" />
+            <Button layoutX="289.0" layoutY="68.0" mnemonicParsing="false" onAction="#saveButtonClick" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="Save" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>
